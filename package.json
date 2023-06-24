@@ -1,0 +1,34 @@
+{
+  "name": "@dgswcns/cns-funnel",
+  "version": "0.0.3",
+  "main": "index.js",
+  "repository": "https://github.com/CNS-DGSW/CNS-Funnel.git",
+  "author": "강성훈 <yolly050101@naver.com>",
+  "license": "MIT",
+  "source": "./dist/index.ts",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "dependencies": {
+    "react": "^18.2.0",
+    "typescript": "^5.1.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.14",
+    "esbuild": "^0.18.7",
+    "eslint": "^8.43.0",
+    "prettier": "^2.8.8"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "./dist/index.js",
+    "typings": "./dist/index.d.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn run build:clean && tsc && yarn run build:dist",
+    "build:clean": "rm -rf ./dist",
+    "build:dist": "node esbuild.config.js"
+  }
+}
