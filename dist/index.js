@@ -47,16 +47,16 @@ var OrderFunnel = ({ page, children }) => {
 
 // src/key/index.tsx
 var import_react2 = __toESM(require("react"));
-var useKeyFunnel = () => {
-  const [step, setStep] = (0, import_react2.useState)();
+var useKeyFunnel = (defaultValue) => {
+  const [step, setStep] = (0, import_react2.useState)(defaultValue);
   const Step = (props) => {
     return /* @__PURE__ */ import_react2.default.createElement(import_react2.default.Fragment, null, props.children);
   };
   const FunnelProvider = ({ children }) => {
     const targetStep = import_react2.Children.toArray(children).find((childStep) => childStep.props.name === step);
-    return Object.assign(targetStep, { Step });
+    return /* @__PURE__ */ import_react2.default.createElement(import_react2.default.Fragment, null, targetStep);
   };
-  return [FunnelProvider, setStep];
+  return [FunnelProvider, Step, setStep];
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

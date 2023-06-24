@@ -1,10 +1,10 @@
 {
   "name": "@dgswcns/cns-funnel",
-  "version": "0.0.3",
-  "main": "index.js",
+  "version": "0.0.7",
   "repository": "https://github.com/CNS-DGSW/CNS-Funnel.git",
   "author": "강성훈 <yolly050101@naver.com>",
   "license": "MIT",
+  "main": "./dist/index.js",
   "source": "./dist/index.ts",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
