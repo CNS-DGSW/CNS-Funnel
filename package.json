@@ -24,7 +24,8 @@
     "typings": "./dist/index.d.ts"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "build": "yarn run build:clean && tsc && yarn run build:dist",
